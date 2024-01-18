@@ -1,0 +1,38 @@
+// Calculando o número de vitórias do herói nível do herói:
+
+function calcularSaldovitoria(vitoria, derrota){
+return (vitoria - derrota)
+}
+
+let vitoria = 120
+let derrota = 68
+let saldoVitoria = vitoria - derrota; 
+
+// Atribuir ao herói um dos nível abaixo:
+
+let nivelHeroi;
+
+switch (true) {
+    case saldoVitoria <= 10:
+        nivelHeroi = 'Ferro';
+        break;
+    case saldoVitoria <= 20:
+        nivelHeroi = 'Bonze';
+        break;
+    case saldoVitoria <= 50:
+        nivelHeroi = 'Prata';
+        break;
+    case saldoVitoria <= 80:
+        nivelHeroi = 'Ouro';
+        break;
+    case saldoVitoria <= 90:
+        nivelHeroi = 'Diamante';
+        break;
+    case saldoVitoria <= 100:
+        nivelHeroi = 'Lendário';
+        break;
+    default:
+        nivelHeroi = 'Imortal';
+}
+
+console.log("O herói tem saldo de " + saldoVitoria + " e está no nível: " + nivelHeroi);
